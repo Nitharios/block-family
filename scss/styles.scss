@@ -3,12 +3,18 @@
 @import "./partials/reset";
 // Variables
 $dark-color: purple;
-$light-color: orange;
+$light-color: green;
 $bright-color: yellow;
 $padding: 20px;
 // Media Query Ranges
 // Mixins
-
+@mixin block_font($block_font_size, $block_font_color, $block_background_color) {
+  font-size: $block_font_size;
+  color: $block_font_color;
+  .block_family li {
+    background-color: $block_background_color
+  };
+}
 // Styles
 body {
   background-color: orange;
@@ -17,19 +23,24 @@ body {
 
   @media screen and (min-width: 0px) {
     background-color: $dark-color;
+    @include block_font(40px, $light-color, $bright-color);
   }
 
   @media screen and (min-width: 800px) {
     background-color: $light-color;
+    @include block_font(50px, $bright-color, $dark-color);
   }
 
   @media screen and (min-width: 1200px) {
     background-color: $bright-color;
+    @include block_font(60px, $dark-color, $light-color);
   }
 }
 
 h1, h2, h3, h4 {
   font-family: "Helvetica Neue", "Helvetica", sans-serif;
+
+  // @media screen and (min-width)
 }
 
 h1 {
