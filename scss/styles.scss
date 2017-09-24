@@ -7,7 +7,6 @@ $light-color: orange;
 $bright-color: yellow;
 $padding: 20px;
 // Media Query Ranges
-
 // Mixins
 
 // Styles
@@ -15,6 +14,18 @@ body {
   background-color: orange;
   text-align: center;
   color: #EEE;
+
+  @media screen and (min-width: 0px) {
+    background-color: $dark-color;
+  }
+
+  @media screen and (min-width: 800px) {
+    background-color: $light-color;
+  }
+
+  @media screen and (min-width: 1200px) {
+    background-color: $bright-color;
+  }
 }
 
 h1, h2, h3, h4 {

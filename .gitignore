@@ -5,3 +5,4 @@ public/css/
 !public/index.html
 
 .DS_Store
+package-lock.json
